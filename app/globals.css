@@ -1,0 +1,100 @@
+@import "tailwindcss";
+
+:root {
+  --primary: #2563EB;
+  --primary-accent: #3B82F6;
+  --primary-pale: #EFF6FF;
+  --bg-main: #FFFFFF;
+  --bg-secondary: #F5F8FF;
+  --text-main: #172033;
+  --text-secondary: #64748B;
+  --border-color: #DCE5F2;
+  --success: #15803D;
+  --warning: #B45309;
+  --error: #DC2626;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+}
+
+@theme {
+  --color-primary-main: #2563EB;
+  --color-primary-accent: #3B82F6;
+  --color-primary-pale: #EFF6FF;
+  --color-bg-main: #FFFFFF;
+  --color-bg-secondary: #F5F8FF;
+  --color-text-main: #172033;
+  --color-text-secondary: #64748B;
+  --color-border-subtle: #DCE5F2;
+  --color-status-success: #15803D;
+  --color-status-warning: #B45309;
+  --color-status-error: #DC2626;
+}
+
+html, body {
+  background-color: #FFFFFF;
+  color: #172033;
+  color-scheme: light;
+}
+
+body {
+  font-family: var(--font-inter), system-ui, -apple-system, "Segoe UI", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading), system-ui, sans-serif;
+  letter-spacing: -0.01em;
+}
+
+/* Liquid Glass */
+.liquid-glass {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(18px) saturate(140%);
+  -webkit-backdrop-filter: blur(18px) saturate(140%);
+  border: 1px solid rgba(220, 229, 242, 0.9);
+  box-shadow: 0 10px 30px -12px rgba(37, 99, 235, 0.10);
+}
+
+.liquid-glass-accent {
+  background: linear-gradient(135deg, rgba(239, 246, 255, 0.9) 0%, rgba(255, 255, 255, 0.96) 100%);
+  backdrop-filter: blur(22px) saturate(150%);
+  -webkit-backdrop-filter: blur(22px) saturate(150%);
+  border: 1px solid rgba(59, 130, 246, 0.22);
+  box-shadow: 0 12px 35px -10px rgba(37, 99, 235, 0.18);
+}
+
+.liquid-glass-card {
+  background: #FFFFFF;
+  border: 1px solid #DCE5F2;
+  box-shadow: 0 2px 8px -2px rgba(23, 32, 51, 0.06);
+  transition: box-shadow .2s cubic-bezier(.16,1,.3,1), transform .2s cubic-bezier(.16,1,.3,1), border-color .2s;
+}
+
+.liquid-glass-card:hover {
+  border-color: #BFDBFE;
+  box-shadow: 0 14px 28px -10px rgba(37, 99, 235, 0.14);
+  transform: translateY(-2px);
+}
+
+.m3-elevation-1 { box-shadow: 0 1px 3px 1px rgba(0,0,0,.05), 0 1px 2px 0 rgba(0,0,0,.03); }
+.m3-elevation-2 { box-shadow: 0 2px 6px 2px rgba(0,0,0,.06), 0 1px 2px 0 rgba(0,0,0,.04); }
+.m3-elevation-3 { box-shadow: 0 4px 12px 3px rgba(37,99,235,.09), 0 1px 3px 0 rgba(0,0,0,.05); }
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-thumb { background: #CBD5E1; border-radius: 8px; }
+::-webkit-scrollbar-thumb:hover { background: #94A3B8; }
+::-webkit-scrollbar-track { background: transparent; }
